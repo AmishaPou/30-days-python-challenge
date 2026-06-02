@@ -1,59 +1,75 @@
 # Day 2 - Student Report Card Generator
 
-student_name = input("Enter student name:")
-student_id = input("Enter roll number:")
+# Student Information
+student_name = input("Enter student name: ")
+roll_number = input("Enter roll number: ")
 
-english = float(input("Enter English marks:"))
-math = float(input("Enter Math marks:"))
-science = float(input("Enter Science marks:"))
+# Subject Marks
+english = float(input("Enter English marks: "))
+math = float(input("Enter Math marks: "))
+science = float(input("Enter Science marks: "))
 
+# Store details in a dictionary
 student_info = {
     "name": student_name,
-    "id": student_id,
-    "scores":[english, math,science]
+    "roll_number": roll_number,
+    "marks": [english, math, science]
 }
 
-total_marks = english+math+science
-average_marks = total_marks/3
+# Calculate total and percentage
+total_marks = english + math + science
+percentage = (total_marks / 300) * 100
 
-passed ={
-    english>=40 and
-    math>=40 and
-    science>=40
-}
-if average_marks >= 90:
+# Pass/Fail using logical operators
+passed = (
+    english >= 40 and
+    math >= 40 and
+    science >= 40
+)
+
+# Grade assignment using if-elif-else
+if percentage >= 90:
     grade = "A+"
-elif average_marks >= 80:
+elif percentage >= 80:
     grade = "A"
-elif average_marks >= 70:
-    grade = "B+"
-elif average_marks >= 60:
+elif percentage >= 70:
     grade = "B"
-elif average_marks >= 50:
+elif percentage >= 60:
     grade = "C"
+elif percentage >= 40:
+    grade = "D"
 else:
     grade = "F"
 
+# Nested if with set membership test
 if passed:
-    if grade in ["A+", "A"]:
-        division = "Distinction"
-    elif grade == "B+":
-        division = "First Division"
+    if grade in {"A+", "A"}:
+        remark = "Distinction"
     else:
-        division = "Second Division"
+        remark = "Pass"
 else:
-    division = "Fail"
+    remark = "Fail"
 
+# Ternary expression
 status = "PASS" if passed else "FAIL"
 
+# Formatted Report Card
+print("\n" + "=" * 35)
+print("      STUDENT REPORT CARD")
+print("=" * 35)
 
-print(f"{'STUDENT REPORT CARD' :}")
-print("-" * 30)
-print("Name        :", student_info["name"])
-print("Roll No     :", student_info["id"])
-print("Marks       :", student_info["scores"])
-print("Total       :", total_marks)
-print("Average     :", round(average_marks, 2))
-print("Grade       :", grade)
-print("Division    :", division)
-print("Final Status:", status)
+print(f"Name       : {student_info['name']}")
+print(f"Roll No    : {student_info['roll_number']}")
+print(f"English    : {english}")
+print(f"Math       : {math}")
+print(f"Science    : {science}")
+
+print("-" * 35)
+
+print(f"Total      : {total_marks}")
+print(f"Percentage : {percentage:.2f}%")
+print(f"Grade      : {grade}")
+print(f"Remark     : {remark}")
+print(f"Status     : {status}")
+
+print("=" * 35)
