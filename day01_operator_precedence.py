@@ -2,17 +2,17 @@
 
 print("Operator Precedence and Associativity\n")
 
-result1 = 2 + 3 * 4
-print("2 + 3 * 4 =", result1)
+value1 = 2 + 3 * 4
+print("2 + 3 * 4 =", value1)
 
-result2 = 10 - 6 / 2
-print("10 - 6 / 2 =", result2)
+value2 = 10 - 6 / 2
+print("10 - 6 / 2 =", value2)
 
-result3 = (2 + 3) * 4
-print("(2 + 3) * 4 =", result3)
+value3 = (2 + 3) * 4
+print("(2 + 3) * 4 =", value3)        
 
-result4 = 20 / 5 * 2
-print("20 / 5 * 2 =", result4)
+value4 = 20 / 5 * 2
+print("20 / 5 * 2 =", value4)
 
-result5 = 2 ** 3 ** 2
-print("2 ** 3 ** 2 =", result5)
+value5 = 2 ** 3 ** 2
+print("2 ** 3 ** 2 =", value5)
