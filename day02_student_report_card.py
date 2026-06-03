@@ -1,10 +1,9 @@
 # Day 2 - Student Report Card Generator
 
-# Student Information
+# Read student details
 student_name = input("Enter student name: ")
 roll_number = input("Enter roll number: ")
 
-# Subject Marks
 english = float(input("Enter English marks: "))
 math = float(input("Enter Math marks: "))
 science = float(input("Enter Science marks: "))
@@ -53,10 +52,10 @@ else:
 # Ternary expression
 status = "PASS" if passed else "FAIL"
 
-# Formatted Report Card
-print("\n" + "=" * 35)
-print("      STUDENT REPORT CARD")
-print("=" * 35)
+# Print Report Card
+
+print("        STUDENT REPORT CARD")
+print("=" * 40)
 
 print(f"Name       : {student_info['name']}")
 print(f"Roll No    : {student_info['roll_number']}")
@@ -64,7 +63,7 @@ print(f"English    : {english}")
 print(f"Math       : {math}")
 print(f"Science    : {science}")
 
-print("-" * 35)
+print("-" * 40)
 
 print(f"Total      : {total_marks}")
 print(f"Percentage : {percentage:.2f}%")
@@ -72,4 +71,3 @@ print(f"Grade      : {grade}")
 print(f"Remark     : {remark}")
 print(f"Status     : {status}")
 
-print("=" * 35)
