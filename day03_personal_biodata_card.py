@@ -56,7 +56,6 @@ print(f"Hobbies     : {profile['hobbies']}")
 print(f"Languages   : {profile['languages']}")
 
 print("\nAdditional Information")
-print("-" * 50)
 print(f"First letter of name      : {full_name[0]}")
 print(f"Number of hobbies         : {len(hobbies)}")
 print(f"Number of unique languages: {len(languages)}")
