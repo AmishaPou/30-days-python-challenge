@@ -1,18 +1,12 @@
-# Day 1 - Operator Precedence & Associativity
+print(2 + 3 * 4)          
+print((2 + 3) * 4)        
 
-print("Operator Precedence and Associativity\n")
+print(2 ** 3 ** 2)        
 
-value1 = 2 + 3 * 4
-print("2 + 3 * 4 =", value1)
+print(-3 ** 2)           
+print((-3) ** 2)          
 
-value2 = 10 - 6 / 2
-print("10 - 6 / 2 =", value2)
+print(100 / 5 * 2)       
+print(10 - 5 - 2)         
 
-value3 = (2 + 3) * 4
-print("(2 + 3) * 4 =", value3)        
-
-value4 = 20 / 5 * 2
-print("20 / 5 * 2 =", value4)
-
-value5 = 2 ** 3 ** 2
-print("2 ** 3 ** 2 =", value5)
+print(5 + 3 * 2 > 10 and not False or False)  
